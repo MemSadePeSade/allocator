@@ -10,7 +10,7 @@ MemoryBuffer buffer2(1024);
 MyAllocator<std::pair<const unsigned int, unsigned int>> alloc1(&buffer1);
 MyAllocator<int> alloc2(&buffer2);
 
-using mymap = std::map<unsigned int, unsigned int, std::less<>, MyAllocator<std::pair<const unsigned int, unsigned int>>>;
+using mymap = std::map<unsigned int, unsigned int, std::less<unsigned int>, MyAllocator<std::pair<const unsigned int, unsigned int>>>;
 
 unsigned int fact(unsigned int n) 
 {
