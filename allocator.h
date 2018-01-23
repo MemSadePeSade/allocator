@@ -1,7 +1,6 @@
 #pragma once
 
 #include "memorybuffer.h"
-
 #include <type_traits>
 
 template <typename T = void>
@@ -13,6 +12,12 @@ struct MyAllocator
 	using pointer = T *;
 
 	explicit MyAllocator(MemoryBuffer * a) : buffer(a) {}
+	
+	template<typename U>
+	struct rebind
+	{
+		using other = MyAllocator<U>;
+	};
 	
 	template <typename U>
 	MyAllocator(MyAllocator<U> const & rhs) : buffer(rhs.buffer) {}
