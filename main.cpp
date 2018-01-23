@@ -39,7 +39,6 @@ int main()
 		std::cout << var.first << " " << var.second << std::endl;
 	}
 	
-	
 	MyContainer<int> container(10);
 	for (unsigned int i = 0; i < 10; i++)
 	{
@@ -57,6 +56,7 @@ int main()
 		std::cout << var << std::endl;
 	}
 	
+	system("pause");
 }
 
 

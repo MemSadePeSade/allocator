@@ -62,7 +62,7 @@ public:
 		: r(alloc, n)
 	{
 		allocator_type & a = r;
-		pointer p = traits::allocate(a, size());
+		pointer p = traits::allocate(a, capacity());
 		
 		r.data = p;
 	}

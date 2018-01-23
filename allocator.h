@@ -9,7 +9,16 @@ struct MyAllocator
 	template <typename U> friend struct MyAllocator;
 	
 	using value_type = T;
+	
 	using pointer = T *;
+	using const_pointer = const T *;
+
+	using void_pointer = void *;
+	using const_void_pointer = const void *;
+
+	using size_type = size_t;
+	using difference_type = std::ptrdiff_t;
+
 
 	explicit MyAllocator(MemoryBuffer * a) : buffer(a) {}
 	
